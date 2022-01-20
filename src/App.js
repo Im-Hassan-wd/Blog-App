@@ -1,12 +1,11 @@
 import React from 'react';
-
+import Navbar from './Navbar';
 const App = () => {
-    const title = "Welcome to new blog";
-
     return ( 
         <div className="app">
+            <Navbar />
             <div className="content">
-                <h1>{ title }</h1>
+                <h1>App component</h1>
             </div>
         </div>
     );
