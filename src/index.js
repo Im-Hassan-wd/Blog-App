@@ -1,25 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-
-import JSON from './db.json';
-
-// COMPONENTS
-
-class App extends Component {
-
-  state = {
-    news:JSON
-  }
-
-  render() {
-    return (
-      <div className="hello">
-        
-        <PlaylistHeader/>
-      </div>
-    )
-  }
-}
+import './index.css';
+import App from './App';
 
 
-ReactDOM.render(<App/>, document.querySelector('#root'));
+
+ReactDOM.render(
+  <App/>, 
+  document.getElementById('root')
+);
