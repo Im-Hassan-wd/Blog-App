@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Home = () => {
-    let name = "Jerry";
+    //let name = "Jerry";
+    const [name, setName] = useState("Jerry");
 
     const handleClick = () => {
-        name = "Luchi";
+        setName("Luchi");
     }
 
     return (
