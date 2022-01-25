@@ -17,7 +17,7 @@ const Home = () => {
 
     useEffect(() => {
         console.log("use effect fired");
-    }, []);
+    }, [name]);
 
     return (
         <div className="home">
