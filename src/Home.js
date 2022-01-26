@@ -7,14 +7,20 @@ const Home = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch("http://localhost:8000/blogs")
-            .then(response => {
-                return response.json();
-            })
-            .then(data => {
-                setBlogs(data);
-                setIsPending(false);
-            });
+            fetch("http://localhost:8000/blog")
+                .then(response => {
+                    if(!response.ok) {
+                        throw Error("could not fetch the data for that resource");
+                    }
+                    // return response.json();
+                })
+                .then(data => {
+                    setBlogs(data);
+                    setIsPending(false);
+                })
+                .catch(err => {
+                    console.log(err.message);
+                });
         }, 2000);
     }, []);
 
