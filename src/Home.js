@@ -3,11 +3,7 @@ import BlogList from './BlogList';
 
 const Home = () => {
     const [blogs, setBlogs] = useState(null);
-
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter(blog => blog.id !== id)
-        setBlogs(newBlogs);
-    }
+    const [isPending, setIsPending] = useState(true);
 
     useEffect(() => {
         fetch("http://localhost:8000/blogs")
@@ -22,7 +18,8 @@ const Home = () => {
 
     return (
         <div className="home">
-           {blogs && <BlogList blogs={blogs} title="All Blogs !" handleDelete={handleDelete} />}
+            { isPending && <div>Loading...</div> }
+           {blogs && <BlogList blogs={blogs} title="All Blogs !" />}
         </div>
     );
 }
