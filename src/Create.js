@@ -4,13 +4,15 @@ const Create = () => {
     const [title, setTitle] = useState("");
     const [feed, setFeed] = useState("");
     const [author, setAuthor] = useState("");
-    const [isLoading, setIsLoading] = useState("false");
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const blog = {
             title, feed, author
         };
+
+        setIsLoading(true)
 
         fetch("http://localhost:8000/blogs", {
             method: "POST",
