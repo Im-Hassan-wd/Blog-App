@@ -3,7 +3,7 @@ import { useState } from "react";
 const Create = () => {
     const [title, setTitle] = useState("");
     const [feed, setFeed] = useState("");
-    const [author, setAuthor] = useState("");
+    const [author, setAuthor] = useState("luigi");
     const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = (e) => {
@@ -20,6 +20,7 @@ const Create = () => {
             body: JSON.stringify(blog)
         }).then(() => {
             console.log("new blog added");
+            setIsLoading(false);
         })
     }
 
@@ -47,10 +48,8 @@ const Create = () => {
                     <option value="mario">mario</option>
                     <option value="yoshi">yoshi</option>
                 </select>
-                <button>Add blog</button>
-                <p>{ title }</p>
-                <p>{ feed }</p>
-                <p>{ author }</p>
+                { isLoading && <div>Adding blog...</div>}
+                { !isLoading && <button>Add blog</button>}
             </form>
         </div>
     );
