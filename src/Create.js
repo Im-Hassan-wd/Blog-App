@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
     const [title, setTitle] = useState("");
     const [feed, setFeed] = useState("");
     const [author, setAuthor] = useState("luigi");
     const [isLoading, setIsLoading] = useState(false);
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
