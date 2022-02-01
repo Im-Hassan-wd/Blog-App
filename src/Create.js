@@ -21,9 +21,9 @@ const Create = () => {
             headers: { "content-Type": "application/json"},
             body: JSON.stringify(blog)
         }).then(() => {
-            console.log("new blog added");
             setIsLoading(false);
-        })
+            history.go(-1);
+        });
     }
 
     return (
