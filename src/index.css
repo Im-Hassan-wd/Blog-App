@@ -133,3 +133,7 @@
   align-items: center;
   padding: 0 10px;
 }
+
+.error-image {
+  width: 50%;
+}
