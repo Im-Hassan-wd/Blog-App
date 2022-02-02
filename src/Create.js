@@ -7,6 +7,11 @@ const Create = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const blog = {
+            title, feed, author
+        }
+
+        console.log(blog);
     }
 
     return (
