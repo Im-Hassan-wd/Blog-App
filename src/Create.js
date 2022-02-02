@@ -22,7 +22,7 @@ const Create = () => {
             body: JSON.stringify(blog)
         }).then(() => {
             setIsLoading(false);
-            history.go(-1);
+            history.push("/");
         });
     }
 
