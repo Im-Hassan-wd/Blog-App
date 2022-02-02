@@ -9,9 +9,15 @@ const Create = () => {
         e.preventDefault();
         const blog = {
             title, feed, author
-        }
+        };
 
-        console.log(blog);
+        fetch("http://localhost:8000/blogs", {
+            method: "POST",
+            headers: { "content-Type": "application/json"},
+            body: JSON.stringify(blog)
+        }).then(() => {
+            console.log("new blog added");
+        })
     }
 
     return (
