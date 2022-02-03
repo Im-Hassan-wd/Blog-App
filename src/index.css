@@ -122,40 +122,40 @@
 }
 
 /* error 404 not found page */
-.logo {
+.not-found .logo {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 5%;
 }
 
-.error {
+.not-found .error {
   display: flex;
   align-items: center;
   padding: 0 10px;
 }
 
-.error-image {
+.not-found .error-image {
   width: 50%;
 }
 
-.content {
+.not-found .content {
   margin-left: 50px;
 }
 
-.content h1 {
+.not-found .content h1 {
   font-size: 3rem;
   padding: 20px 0;
   max-width: 400px;
 }
 
-.content p {
+.not-found .content p {
   font-size: 1.1rem;
   max-width: 250px;
   line-height: 1.7rem;
   letter-spacing: 1px;
 }
 
-.content a {
+.not-found .content a {
   display: inline-block;
   text-decoration: none;
   background: #333333;
@@ -168,4 +168,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 700px) {
+  .content {
+    margin-left: 0;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .error {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .error-image {
+    order: 0;
+    width: 80%;
+  }
 }
