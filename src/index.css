@@ -147,3 +147,10 @@
   padding: 20px 0;
   max-width: 400px;
 }
+
+.content p {
+  font-size: 1.1rem;
+  max-width: 250px;
+  line-height: 1.7rem;
+  letter-spacing: 1px;
+}
