@@ -171,20 +171,20 @@
 }
 
 @media (max-width: 700px) {
-  .content {
+  .not-found .content {
     margin-left: 0;
   }
 
-  .content h1 {
+  .not-found .content h1 {
     font-size: 2.5rem;
   }
 
-  .error {
+  .not-found .error {
     margin-top: 20px;
     flex-direction: column;
   }
 
-  .error-image {
+  .not-found .error-image {
     order: 0;
     width: 80%;
   }
